@@ -37,3 +37,7 @@ variable "firewall_http_rule" {
 variable "firewall_ssh_rule" {
   description = "The firewall rule name"
 }
+
+variable "ip_name" {
+  type = string
+}

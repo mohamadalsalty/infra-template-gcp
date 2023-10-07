@@ -33,3 +33,6 @@ variable "firewall_http_rule" {
 variable "firewall_ssh_rule" {
   description = "The firewall rule ssh name"
 }
+variable "distro" {
+  type = string
+}

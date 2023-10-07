@@ -3,6 +3,12 @@ provider "google" {
   region  = var.region
 }
 
+
+locals {
+  distro = "debian-cloud/debian-11"
+}
+
+
 module "network" {
   source       = "./network"
   project_id   = var.project_id
@@ -24,6 +30,7 @@ module "backend-vm" {
   subnet_name        = module.network.subnet_name
   firewall_http_rule = var.firewall_http_rule
   firewall_ssh_rule  = var.firewall_ssh_rule
+  distro             = local.distro
 
 }
 
