@@ -24,7 +24,6 @@ module "backend-vm" {
   project_id         = var.project_id
   region             = var.region
   zone               = var.zone
-  machine_type       = var.machine_type
   vm_name            = var.vm_name
   network_name       = module.network.network_name
   subnet_name        = module.network.subnet_name
@@ -39,7 +38,6 @@ module "firewall" {
   project_id         = var.project_id
   region             = var.region
   zone               = var.zone
-  machine_type       = var.machine_type
   vm_name            = var.vm_name
   network_name       = module.network.network_name
   subnet_name        = module.network.subnet_name

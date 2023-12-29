@@ -3,11 +3,15 @@ provider "google" {
   region  = var.region
 }
 
+locals {
+  machine_type = "e2-micro"
+}
+
 resource "google_compute_instance" "vm" {
   name         = var.vm_name
-  machine_type = var.machine_type
   zone         = var.zone
   tags         = [var.firewall_http_rule, var.firewall_ssh_rule]
+  machine_type = local.machine_type
 
   boot_disk {
     initialize_params {

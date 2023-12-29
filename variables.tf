@@ -10,9 +10,6 @@ variable "zone" {
   description = "The zone to create the VM in"
 }
 
-variable "machine_type" {
-  description = "The machine type to use for the VM"
-}
 
 variable "vm_name" {
   description = "The name to use for the VM"
@@ -36,8 +33,4 @@ variable "firewall_http_rule" {
 
 variable "firewall_ssh_rule" {
   description = "The firewall rule name"
-}
-
-variable "ip_name" {
-  type = string
 }
